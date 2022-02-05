@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width ,initial-scale=1">
+	<title>temp converter</title>
+	<style type="text/css">
+		#div{
+			height: 300px;
+			width: 700px;
+			background-color: lightblue;
+			margin: 0;
+			padding: 50px;
+			margin-left: 300px;
+			margin-top: 50px;
+			
+			
+
+		}
+		#d1{
+			height: 300px;
+			width: 50%;
+			float: left;
+			padding-top: 50px;
+		}
+		#d2{
+			height: 300px;
+			width: 50%;
+			float: left;
+			padding-top: 50px;
+		}
+		#input1{
+			height: 50px;
+			width: 200px;
+			font-size: 25px;
+			
+		}
+		#input2{
+			height: 50px;
+			width: 200px;
+			font-size: 25px;
+			
+		}
+		.lable{
+			
+			width: 200px;
+			height: 50px;
+			
+			background-color: orange;
+			border: 5px;
+			border-style: ridge;
+
+		}
+		#l1{
+			font-size: 50px;
+			
+			background-color:;
+			padding: 1px;
+			color: gray;
+		}
+		#l2{
+			font-size: 50px;
+			
+			background-color: ;
+			
+			
+			color: gray;
+			padding: 1px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div"> 
+		
+		<div id="d1"><label class="label" id="l1">Temp :</label> <br> <br>
+			<input type="number" value="0" name="" id="input1"></div>
+		
+		<div id="d2">
+			<label class="label" id="l2">Celcius :</label> <br> <br>
+			<input type="number" value="32" name="" id="input2"></div>
+	</div>
+	<script type="text/javascript">
+		var temp=document.getElementById('input1');
+		var conv=document.getElementById('input2');
+
+		temp.addEventListener('input',function(){
+			var c = this.value;
+		
+			var f = (c * 9/5) + 32;
+			if (!Number.isInteger(f)){
+			f=f.toFixed(4);
+		}
+			conv.value=f;
+
+		});
+		conv.addEventListener('input',function(){
+			var f=this.value;
+			var c=(f - 32) * 5/9;
+			if(!Number.isInteger(c)){
+				c=c.toFixed(4);
+			}
+			temp.value=c;
+		});
+
+	</script>
+</body>
+</html>
