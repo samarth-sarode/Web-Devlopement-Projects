@@ -1,0 +1,14 @@
+.btn {
+	background: none;
+	border: none;
+}
+
+.btn:hover {
+	background: none;
+}
+
+.content h1 {
+	text-align: center;
+	margin-top: 20%;
+}
+

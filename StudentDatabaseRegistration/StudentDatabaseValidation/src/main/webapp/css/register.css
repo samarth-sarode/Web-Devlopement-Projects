@@ -1,0 +1,14 @@
+.container {
+    padding-left: 34%;
+    padding-top: 5%;
+
+}
+.container h2 {
+	color: #0e4482;
+}
+.form-control {
+    width: 500px;
+}
+.btn {
+	background-color: #0e4482;
+}
